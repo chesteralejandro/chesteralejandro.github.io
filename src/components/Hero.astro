@@ -1,0 +1,210 @@
+<section class="hero">
+    <div class="text">
+        <div class="location">
+            <span>Las Piñas, Philippines</span>
+        </div>
+        <h1>Chester Alejandro</h1>
+        <p class="role">Front-end Developer</p>
+        <p class="bio">
+            I'm a front-end developer with over three years of experience
+            building responsive, user-friendly websites. I focus on clean,
+            organized code that brings designs to life and ensures a seamless
+            user experience. My goal is to create web applications that are
+            genuinely useful — solutions that help people and make the web a
+            more accessible place.
+        </p>
+        <p class="hobbies">
+            When I'm not coding, I enjoy watching anime, online
+            shopping, and keeping things neat and tidy.
+        </p>
+        <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+            <li>UI/UX Basics</li>
+        </ul>
+        <a href="#works" class="cta">View My Works</a>
+    </div>
+    <div class="photo">
+        <img src="/images/chester.jpg" alt="Chester Alejandro" />
+    </div>
+</section>
+
+<style>
+    .hero {
+        min-height: 100vh;
+        width: min(1200px, 92%);
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+        padding: 100px 0 60px;
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--clr-muted);
+        margin-bottom: 1rem;
+    }
+
+    .location::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 1px;
+        background: var(--clr-muted);
+    }
+
+    h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        font-weight: 400;
+        line-height: 1.05;
+        color: var(--clr-white);
+        letter-spacing: -0.02em;
+        margin-bottom: 0.5rem;
+    }
+
+    .role {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9rem;
+        color: var(--clr-accent);
+        letter-spacing: 0.08em;
+        margin-bottom: 2rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+        color: var(--clr-text-dim);
+        line-height: 1.9;
+        margin-bottom: 1.25rem;
+    }
+
+    .hobbies {
+        font-size: 0.95rem;
+        color: var(--clr-muted);
+        line-height: 1.8;
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+
+    .skills {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0 0 2.5rem;
+    }
+
+    .skills li {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--clr-text-dim);
+        border: 1px solid var(--clr-border);
+        padding: 0.35rem 0.85rem;
+    }
+
+    .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 2rem;
+        border: 1px solid var(--clr-accent);
+        color: var(--clr-accent);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.35s ease;
+    }
+
+    .cta::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--clr-accent);
+        transform: translateX(-100%);
+        transition: transform 0.35s ease;
+        z-index: 0;
+    }
+
+    .cta:hover {
+        color: var(--clr-bg);
+    }
+
+    .cta:hover::before {
+        transform: translateX(0);
+    }
+
+    .cta span {
+        position: relative;
+        z-index: 1;
+    }
+
+    .photo {
+        position: relative;
+    }
+
+    .photo::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        width: 32px;
+        height: 32px;
+        border-top: 2px solid var(--clr-accent);
+        border-right: 2px solid var(--clr-accent);
+        z-index: 1;
+    }
+
+    .photo::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: -1px;
+        width: 32px;
+        height: 32px;
+        border-bottom: 2px solid var(--clr-accent);
+        border-left: 2px solid var(--clr-accent);
+        z-index: 1;
+    }
+
+    .photo img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        display: block;
+        border: 1px solid var(--clr-border);
+        filter: grayscale(20%);
+        transition: filter 0.4s ease;
+    }
+
+    .photo img:hover {
+        filter: grayscale(0%);
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            grid-template-columns: 1fr;
+        }
+
+        .photo {
+            order: -1;
+            max-width: 320px;
+        }
+    }
+</style>
