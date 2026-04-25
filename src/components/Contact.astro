@@ -1,0 +1,243 @@
+<section id="contact">
+    <div class="container">
+        <div class="heading">
+            <span class="label">Contact</span>
+            <h2>Get In Touch</h2>
+            <p class="intro">
+                Have a project in mind or just want to connect? Send me a
+                message — I'd love to hear from you.
+            </p>
+        </div>
+        <div class="content">
+            <form>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="off"
+                        required
+                    />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="off"
+                        required
+                    />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="info">
+                <div class="social">
+                    <span class="info-label">Find Me On</span>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/chester.alejandro.1/" target="_blank" rel="noopener noreferrer">
+                                Facebook ↗
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/chester-alejandro-601403205/" target="_blank" rel="noopener noreferrer">
+                                LinkedIn ↗
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/chesteralejandro" target="_blank" rel="noopener noreferrer">
+                                GitHub ↗
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        padding: 120px 0;
+        border-top: 1px solid var(--clr-border);
+    }
+
+    .container {
+        width: min(1200px, 92%);
+        margin-inline: auto;
+    }
+
+    .heading {
+        margin-bottom: 4rem;
+    }
+
+    .label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--clr-accent);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .label::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 1px;
+        background: var(--clr-accent);
+    }
+
+    h2 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: 400;
+        color: var(--clr-white);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+        color: var(--clr-text-dim);
+        line-height: 1.8;
+        max-width: 480px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 6rem;
+        align-items: start;
+    }
+
+    /* Form */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--clr-accent);
+    }
+
+    input,
+    textarea {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--clr-border);
+        padding: 0.6rem 0;
+        color: var(--clr-text);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.3s ease;
+        resize: none;
+        width: 100%;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-bottom-color: var(--clr-accent);
+    }
+
+    button {
+        align-self: flex-start;
+        padding: 0.85rem 2.5rem;
+        background: var(--clr-accent);
+        border: 1px solid var(--clr-accent);
+        color: var(--clr-bg);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+        background: transparent;
+        color: var(--clr-accent);
+    }
+
+    /* Info / Socials */
+    .info {
+        min-width: 160px;
+    }
+
+    .info-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--clr-muted);
+        display: block;
+        margin-bottom: 1.25rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    a {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--clr-text-dim);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: var(--clr-accent);
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .info {
+            min-width: unset;
+        }
+
+        ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+</style>
