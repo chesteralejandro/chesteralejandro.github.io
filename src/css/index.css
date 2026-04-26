@@ -1,13 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* ── VARIABLES ───────────────────────────────────── */
 :root {
-	--clr-bg: #111110;
-	--clr-surface: #1a1a18;
-	--clr-border: #2e2e2b;
-	--clr-muted: #6b6b65;
-	--clr-text: #e8e6df;
-	--clr-text-dim: #9e9c95;
-	--clr-accent: #e8b84b;
-	--clr-white: #f5f3ec;
+	/*  */
 }
 
 /* ── RESET ───────────────────────────────────────── */
@@ -21,13 +16,10 @@
 
 html {
 	scroll-behavior: smooth;
-	font-size: 16px;
+	font-size: 100%;
 }
 
 body {
-	background-color: var(--clr-bg);
-	color: var(--clr-text);
-	font-family: 'DM Sans', sans-serif;
 	font-weight: 300;
 	line-height: 1.7;
 	overflow-x: hidden;
@@ -47,22 +39,7 @@ ul {
 	list-style: none;
 }
 
-/* ── SCROLLBAR ───────────────────────────────────── */
-::-webkit-scrollbar {
-	width: 4px;
-}
-
-::-webkit-scrollbar-track {
-	background: var(--clr-bg);
-}
-
-::-webkit-scrollbar-thumb {
-	background: var(--clr-accent);
-	border-radius: 2px;
-}
-
-/* ── SELECTION ───────────────────────────────────── */
-::selection {
-	background: var(--clr-accent);
-	color: var(--clr-bg);
+.container {
+	width: min(1200px, 92%);
+	margin-inline: auto;
 }
