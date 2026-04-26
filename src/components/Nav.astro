@@ -1,8 +1,10 @@
 <header>
 	<nav>
 		<a href="#" class="logo">CA</a>
-		<a href="#projects">Projects</a>
-		<a href="#contact">Contact</a>
+		<div class="links">
+			<a href="#projects">Projects</a>
+			<a href="#contact">Contact</a>
+		</div>
 	</nav>
 </header>
 
@@ -14,22 +16,65 @@
 		right: 0;
 		z-index: 1000;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
+		padding-inline: var(--space-6);
 		pointer-events: none;
 	}
 
 	nav {
 		pointer-events: all;
-		width: fit-content;
 		display: flex;
 		align-items: center;
-		gap: 0.25rem;
-		background: rgba(26, 26, 24, 0.85);
+		gap: var(--space-2);
+		background: rgba(28, 37, 65, 0.75);
 		backdrop-filter: blur(16px);
 		-webkit-backdrop-filter: blur(16px);
+		border: 1px solid var(--clr-border-strong);
+		border-radius: var(--radius-full);
+		padding: var(--space-2);
+	}
+
+	.logo {
+		font-family: var(--font-display);
+		font-size: var(--text-sm);
+		font-weight: 700;
+		color: var(--clr-accent);
+		background: rgba(243, 156, 18, 0.1);
 		border: 1px solid var(--clr-border);
-		border-radius: 999px;
-		padding: 0.4rem 0.4rem;
+		border-radius: var(--radius-full);
+		padding: var(--space-2) var(--space-4);
+		letter-spacing: 0.05em;
+		transition:
+			background var(--transition-fast),
+			border-color var(--transition-fast);
+	}
+
+	.logo:hover {
+		background: rgba(243, 156, 18, 0.2);
+		border-color: var(--clr-border-strong);
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+		gap: var(--space-1);
+	}
+
+	.links a {
+		font-family: var(--font-body);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--clr-text-muted);
+		border-radius: var(--radius-full);
+		padding: var(--space-2) var(--space-4);
+		transition:
+			color var(--transition-fast),
+			background var(--transition-fast);
+	}
+
+	.links a:hover {
+		color: var(--clr-text);
+		background: rgba(255, 255, 255, 0.06);
 	}
 </style>
