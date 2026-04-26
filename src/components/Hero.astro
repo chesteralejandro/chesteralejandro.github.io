@@ -3,39 +3,186 @@ import SectionLayout from '../layouts/SectionLayout.astro';
 ---
 
 <SectionLayout id="hero">
-	<div class="details">
-		<div class="location">
-			<span>Las Piñas, Philippines</span>
+	<div class="hero-grid">
+		<div class="details">
+			<div class="location">
+				<span>📍 Las Piñas, Philippines</span>
+			</div>
+			<h1>Chester <br /> Alejandro</h1>
+			<p class="role">Front-end Developer</p>
+			<p class="bio">
+				I'm a front-end developer with over three years of experience
+				building responsive, user-friendly websites. I focus on clean,
+				organized code that brings designs to life and ensures a
+				seamless user experience. My goal is to create web applications
+				that are genuinely useful — solutions that help people and make
+				the web a more accessible place.
+			</p>
+			<p class="hobbies">
+				When I'm not coding, I enjoy watching anime, online shopping,
+				and keeping things neat and tidy.
+			</p>
+			<div class="ctas">
+				<a href="#projects" class="cta primary">View My Projects</a>
+				<a href="#contact" class="cta secondary">Contact Me</a>
+			</div>
 		</div>
-		<h1>Chester Alejandro</h1>
-		<p class="role">Front-end Developer</p>
-		<p class="bio">
-			I'm a front-end developer with over three years of experience
-			building responsive, user-friendly websites. I focus on clean,
-			organized code that brings designs to life and ensures a seamless
-			user experience. My goal is to create web applications that are
-			genuinely useful — solutions that help people and make the web a
-			more accessible place.
-		</p>
-		<p class="hobbies">
-			When I'm not coding, I enjoy watching anime, online shopping, and
-			keeping things neat and tidy.
-		</p>
-		<div class="ctas">
-			<a href="#projects" class="cta primary">View My Projects</a>
-			<a href="#contact" class="cta secondary">Contact Me</a>
+
+		<div class="photo">
+			<figure>
+				<img src="/images/chester.jpg" alt="Chester Alejandro" />
+			</figure>
+			<ul class="skills">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+				<li>Responsive Design</li>
+				<li>UI/UX Basics</li>
+			</ul>
 		</div>
-	</div>
-	<div class="photo">
-		<figure>
-			<img src="/images/chester.jpg" alt="Chester Alejandro" />
-		</figure>
-		<ul class="skills">
-			<li>HTML</li>
-			<li>CSS</li>
-			<li>JavaScript</li>
-			<li>Responsive Design</li>
-			<li>UI/UX Basics</li>
-		</ul>
 	</div>
 </SectionLayout>
+
+<style>
+	.hero-grid {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		align-items: start;
+		gap: var(--space-16);
+	}
+
+	/* ── Details ── */
+	.details {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
+	}
+
+	.location span {
+		font-family: var(--font-body);
+		font-size: var(--text-sm);
+		color: var(--clr-text-muted);
+		letter-spacing: 0.04em;
+	}
+
+	h1 {
+		font-family: var(--font-display);
+		font-size: var(--text-5xl);
+		font-weight: 700;
+		color: var(--clr-text);
+		line-height: 1.1;
+	}
+
+	h1 span {
+		color: var(--clr-accent);
+	}
+
+	.role {
+		font-family: var(--font-display);
+		font-size: var(--text-lg);
+		font-weight: 500;
+		color: var(--clr-accent);
+		letter-spacing: 0.03em;
+	}
+
+	.bio {
+		font-size: var(--text-base);
+		color: var(--clr-text-muted);
+		line-height: 1.8;
+		max-width: 55ch;
+	}
+
+	.hobbies {
+		font-size: var(--text-sm);
+		color: var(--clr-text-muted);
+		font-style: italic;
+		opacity: 0.75;
+	}
+
+	.ctas {
+		display: flex;
+		gap: var(--space-3);
+		flex-wrap: wrap;
+		margin-top: var(--space-2);
+	}
+
+	.cta {
+		font-family: var(--font-display);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		padding: var(--space-3) var(--space-6);
+		border-radius: var(--radius-full);
+		letter-spacing: 0.03em;
+	}
+
+	.cta.primary {
+		background: var(--clr-accent);
+		color: var(--clr-primary);
+	}
+
+	.cta.secondary {
+		background: transparent;
+		color: var(--clr-text);
+		border: 1px solid var(--clr-border-strong);
+	}
+
+	/* ── Photo ── */
+	.photo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-6);
+	}
+
+	figure {
+		width: 260px;
+		height: 260px;
+		border-radius: var(--radius-full);
+		overflow: hidden;
+		border: 3px solid var(--clr-border-strong);
+		flex-shrink: 0;
+	}
+
+	figure img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: grayscale(100%);
+	}
+
+	/* ── Skills ── */
+	.skills {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-2);
+	}
+
+	.skills li {
+		font-family: var(--font-body);
+		font-size: var(--text-xs);
+		font-weight: 600;
+		color: var(--clr-text-muted);
+		background: var(--clr-surface);
+		border: 1px solid var(--clr-border);
+		border-radius: var(--radius-full);
+		padding: var(--space-1) var(--space-3);
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	/* ── Responsive ── */
+	@media (max-width: 768px) {
+		.hero-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.photo {
+			order: -1;
+		}
+
+		h1 {
+			font-size: var(--text-4xl);
+		}
+	}
+</style>
