@@ -1,4 +1,4 @@
-<section class="hero">
+<section id="about" class="hero">
     <div class="text">
         <div class="location">
             <span>Las Piñas, Philippines</span>
@@ -24,7 +24,10 @@
             <li>Responsive Design</li>
             <li>UI/UX Basics</li>
         </ul>
-        <a href="#works" class="cta">View My Works</a>
+        <div class="ctas">
+            <a href="#projects" class="cta primary">View My Projects</a>
+            <a href="#contact" class="cta secondary">Contact Me</a>
+        </div>
     </div>
     <div class="photo">
         <img src="/images/chester.jpg" alt="Chester Alejandro" />
@@ -118,41 +121,37 @@
     .cta {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
         padding: 0.85rem 2rem;
-        border: 1px solid var(--clr-accent);
-        color: var(--clr-accent);
         font-family: 'JetBrains Mono', monospace;
         font-size: 0.78rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         text-decoration: none;
-        position: relative;
-        overflow: hidden;
-        transition: color 0.35s ease;
+        transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
 
-    .cta::before {
-        content: '';
-        position: absolute;
-        inset: 0;
+    /* Primary */
+    .cta.primary {
         background: var(--clr-accent);
-        transform: translateX(-100%);
-        transition: transform 0.35s ease;
-        z-index: 0;
-    }
-
-    .cta:hover {
+        border: 1px solid var(--clr-accent);
         color: var(--clr-bg);
     }
 
-    .cta:hover::before {
-        transform: translateX(0);
+    .cta.primary:hover {
+        background: transparent;
+        color: var(--clr-accent);
     }
 
-    .cta span {
-        position: relative;
-        z-index: 1;
+    /* Secondary */
+    .cta.secondary {
+        background: transparent;
+        border: 1px solid var(--clr-border);
+        color: var(--clr-text-dim);
+    }
+
+    .cta.secondary:hover {
+        border-color: var(--clr-text-dim);
+        color: var(--clr-text);
     }
 
     .photo {
