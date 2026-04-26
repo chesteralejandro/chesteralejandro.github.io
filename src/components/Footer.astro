@@ -1,0 +1,42 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+	<div class="container">
+		<p class="copyright">Copyright &copy; {currentYear}</p>
+		<p class="credit">Developed by <span>Chester Alejandro</span></p>
+	</div>
+</footer>
+
+<style>
+	footer {
+		border-top: 1px solid var(--clr-border);
+		padding-block: var(--space-8);
+	}
+
+	footer div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	p {
+		font-family: var(--font-body);
+		font-size: var(--text-sm);
+		color: var(--clr-text-muted);
+	}
+
+	.credit span {
+		color: var(--clr-accent);
+		font-weight: 600;
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			flex-direction: column;
+			gap: var(--space-2);
+			text-align: center;
+		}
+	}
+</style>
