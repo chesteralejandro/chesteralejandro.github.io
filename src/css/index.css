@@ -1,0 +1,68 @@
+/* ── VARIABLES ───────────────────────────────────── */
+:root {
+	--clr-bg: #111110;
+	--clr-surface: #1a1a18;
+	--clr-border: #2e2e2b;
+	--clr-muted: #6b6b65;
+	--clr-text: #e8e6df;
+	--clr-text-dim: #9e9c95;
+	--clr-accent: #e8b84b;
+	--clr-white: #f5f3ec;
+}
+
+/* ── RESET ───────────────────────────────────────── */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 16px;
+}
+
+body {
+	background-color: var(--clr-bg);
+	color: var(--clr-text);
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 300;
+	line-height: 1.7;
+	overflow-x: hidden;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+/* ── SCROLLBAR ───────────────────────────────────── */
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--clr-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--clr-accent);
+	border-radius: 2px;
+}
+
+/* ── SELECTION ───────────────────────────────────── */
+::selection {
+	background: var(--clr-accent);
+	color: var(--clr-bg);
+}
