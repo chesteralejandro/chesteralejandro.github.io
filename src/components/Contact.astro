@@ -3,22 +3,24 @@ import SectionLayout from '../layouts/SectionLayout.astro';
 ---
 
 <SectionLayout id="contact">
-	<header>
-		<span class="">Contact</span>
+	<header class="section-header">
+		<span class="label">Contact</span>
 		<h2>Get In Touch</h2>
-		<p>
+		<p class="subtitle">
 			Have a project in mind or just want to connect? Send me a message —
 			I'd love to hear from you.
 		</p>
 	</header>
+
 	<section class="content">
-		<form>
+		<form class="form">
 			<div class="field">
 				<label for="name">Name</label>
 				<input
 					type="text"
 					id="name"
 					name="name"
+					placeholder="Your name"
 					autocomplete="off"
 					required
 				/>
@@ -29,40 +31,220 @@ import SectionLayout from '../layouts/SectionLayout.astro';
 					type="email"
 					id="email"
 					name="email"
+					placeholder="your@email.com"
 					autocomplete="off"
 					required
 				/>
 			</div>
 			<div class="field">
 				<label for="message">Message</label>
-				<textarea id="message" name="message" rows="6" required
-				></textarea>
+				<textarea
+					id="message"
+					name="message"
+					rows="6"
+					placeholder="What's on your mind?"
+					required></textarea>
 			</div>
 			<button type="submit">Send Message</button>
 		</form>
 
-		<article class="social">
-			<h4>Find Me On</h4>
-			<ul>
-				<li>
-					<a
-						href="https://www.linkedin.com/in/chester-alejandro-601403205/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						LinkedIn ↗
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://github.com/chesteralejandro"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						GitHub ↗
-					</a>
-				</li>
-			</ul>
-		</article>
+		<aside class="sidebar">
+			<div class="info">
+				<h4>Let's Work Together</h4>
+				<p>
+					I'm currently open to freelance projects and full-time
+					opportunities. Feel free to reach out!
+				</p>
+			</div>
+
+			<div class="divider"></div>
+
+			<div class="social">
+				<h4>Find Me On</h4>
+				<ul>
+					<li>
+						<a
+							href="https://www.linkedin.com/in/chester-alejandro-601403205/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							LinkedIn
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://github.com/chesteralejandro"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							GitHub
+						</a>
+					</li>
+				</ul>
+			</div>
+		</aside>
 	</section>
 </SectionLayout>
+
+<style>
+	/* ── Section Header ── */
+	.section-header {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+		margin-bottom: var(--space-12);
+	}
+
+	.label {
+		font-family: var(--font-body);
+		font-size: var(--text-xs);
+		font-weight: 600;
+		color: var(--clr-accent);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	h2 {
+		font-family: var(--font-display);
+		font-size: var(--text-3xl);
+		font-weight: 700;
+		color: var(--clr-text);
+	}
+
+	.subtitle {
+		font-size: var(--text-base);
+		color: var(--clr-text-muted);
+		max-width: 50ch;
+		line-height: 1.8;
+	}
+
+	/* ── Layout ── */
+	.content {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		gap: var(--space-12);
+		align-items: start;
+	}
+
+	/* ── Form ── */
+	.form {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-5);
+	}
+
+	.field {
+		display: flex;
+		flex-direction: column;
+		/* gap: var(--space-2); */
+		margin-bottom: var(--space-4);
+	}
+
+	label {
+		font-family: var(--font-body);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--clr-text-muted);
+		letter-spacing: 0.03em;
+	}
+
+	input,
+	textarea {
+		background: var(--clr-surface);
+		border: 1px solid var(--clr-border);
+		border-radius: var(--radius-md);
+		padding: var(--space-3) var(--space-4);
+		color: var(--clr-text);
+		font-size: var(--text-sm);
+		width: 100%;
+		outline: none;
+		transition: border-color var(--transition-fast);
+	}
+
+	input::placeholder,
+	textarea::placeholder {
+		color: var(--clr-text-muted);
+		opacity: 0.5;
+	}
+
+	input:focus,
+	textarea:focus {
+		border-color: var(--clr-accent);
+	}
+
+	textarea {
+		resize: vertical;
+		min-height: 140px;
+	}
+
+	button[type='submit'] {
+		font-family: var(--font-display);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--clr-primary);
+		background: var(--clr-accent);
+		border: none;
+		border-radius: var(--radius-full);
+		padding: var(--space-3) var(--space-8);
+		cursor: pointer;
+		align-self: flex-start;
+		letter-spacing: 0.03em;
+	}
+
+	/* ── Sidebar ── */
+	.sidebar {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-6);
+		background: var(--clr-surface);
+		border: 1px solid var(--clr-border);
+		border-radius: var(--radius-lg);
+		padding: var(--space-8);
+	}
+
+	.info h4,
+	.social h4 {
+		font-family: var(--font-display);
+		font-size: var(--text-base);
+		font-weight: 600;
+		color: var(--clr-text);
+		margin-bottom: var(--space-2);
+	}
+
+	.info p {
+		font-size: var(--text-sm);
+		color: var(--clr-text-muted);
+		line-height: 1.8;
+	}
+
+	.divider {
+		width: 100%;
+		height: 1px;
+		background: var(--clr-border);
+	}
+
+	.social ul {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+
+	.social a {
+		font-family: var(--font-body);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--clr-text-muted);
+		transition: color var(--transition-fast);
+	}
+
+	.social a:hover {
+		color: var(--clr-accent);
+	}
+
+	/* ── Responsive ── */
+	@media (max-width: 768px) {
+		.content {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
