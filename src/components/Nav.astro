@@ -1,6 +1,34 @@
-<header>
+<header class="container">
 	<nav>
-		<a href="#" class="logo">CA</a>
+		<a href="#" class="logo" aria-label="Chester Alejandro">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 64 64"
+				width="34"
+				height="34"
+			>
+				<rect
+					x="2"
+					y="2"
+					width="60"
+					height="60"
+					rx="30"
+					fill="#1c2541"
+					stroke="#f39c12"
+					stroke-width="3"></rect>
+				<text
+					x="50%"
+					y="54%"
+					dominant-baseline="middle"
+					text-anchor="middle"
+					font-family="Arial, sans-serif"
+					font-size="26"
+					font-weight="700"
+					letter-spacing="1"
+					fill="#f39c12">CA</text
+				>
+			</svg>
+		</a>
 		<div class="links">
 			<a href="#projects">Projects</a>
 			<a href="#contact">Contact</a>
@@ -16,7 +44,7 @@
 		right: 0;
 		z-index: 1000;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
 		align-items: center;
 		padding-inline: var(--space-6);
 		pointer-events: none;
@@ -32,27 +60,20 @@
 		-webkit-backdrop-filter: blur(16px);
 		border: 1px solid var(--clr-border-strong);
 		border-radius: var(--radius-full);
-		padding: var(--space-2);
+		padding: var(--space-1);
 	}
 
 	.logo {
-		font-family: var(--font-display);
-		font-size: var(--text-sm);
-		font-weight: 700;
-		color: var(--clr-accent);
-		background: rgba(243, 156, 18, 0.1);
-		border: 1px solid var(--clr-border);
-		border-radius: var(--radius-full);
-		padding: var(--space-2) var(--space-4);
-		letter-spacing: 0.05em;
-		transition:
-			background var(--transition-fast),
-			border-color var(--transition-fast);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: var(--space-1);
+		border-radius: var(--radius-sm);
+		transition: opacity var(--transition-fast);
 	}
 
 	.logo:hover {
-		background: rgba(243, 156, 18, 0.2);
-		border-color: var(--clr-border-strong);
+		opacity: 0.8;
 	}
 
 	.links {
