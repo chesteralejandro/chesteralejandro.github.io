@@ -104,6 +104,7 @@ The portfolio uses a custom CSS design system with the following tokens:
 - **Display font** — Poppins
 - **Body font** — Nunito Sans
 
-## License
+## Contact
 
-This project is open source and available under the [MIT License](LICENSE).
+- **LinkedIn** — [Chester Alejandro](https://www.linkedin.com/in/chester-alejandro-601403205/)
+- **GitHub** — [chesteralejandro](https://github.com/chesteralejandro)
