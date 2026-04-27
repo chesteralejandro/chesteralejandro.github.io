@@ -23,8 +23,37 @@ import SectionLayout from '../layouts/SectionLayout.astro';
 				and keeping things neat and tidy.
 			</p>
 			<div class="ctas">
-				<a href="#projects" class="cta primary">View My Projects</a>
-				<a href="#contact" class="cta secondary">Contact Me</a>
+				<a href="#projects" class="cta primary">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+						></path>
+						<circle cx="12" cy="12" r="3"></circle>
+					</svg>
+					View My Projects
+				</a>
+				<a href="#contact" class="cta secondary">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<rect x="2" y="4" width="20" height="16" rx="2"></rect>
+						<polyline points="2,4 12,13 22,4"></polyline>
+					</svg>
+					Contact Me
+				</a>
 			</div>
 		</div>
 
@@ -117,6 +146,15 @@ import SectionLayout from '../layouts/SectionLayout.astro';
 			background var(--transition-fast),
 			color var(--transition-fast),
 			border-color var(--transition-fast);
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	.cta svg {
+		width: 16px;
+		height: 16px;
+		flex-shrink: 0;
 	}
 
 	.cta.primary {
