@@ -1,18 +1,63 @@
 # Chester Alejandro — Portfolio
 
-Personal portfolio website showcasing my work as a front-end developer.
-Built with Astro, styled with vanilla CSS using a custom design system.
+🌐 Live Demo: [https://chesteralejandro.github.io](https://chesteralejandro.github.io)
+
+A Personal portfolio website showcasing my projects and skills as a front-end developer.
+
+Built with Astro and styled with vanilla CSS using a custom design system.
 
 <br />
 
-## Tech Stack
+## 🚀 Getting Started
 
-- **Framework** — [Astro](https://astro.build/)
+### 📋 Requirements
+
+| Tool                    | Version  | Type     | Purpose                     |
+| ----------------------- | -------- | -------- | --------------------------- |
+| Node.js                 | ≥ 18     | Required | Run npm scripts             |
+| NPM                     | Included | Required | Dependency management       |
+| VS Code                 | Latest   | Optional | Code editor                 |
+| Astro (VS Code ext.)    | Latest   | Optional | Astro syntax + IntelliSense |
+| Prettier (VS Code ext.) | Latest   | Optional | Code formatting             |
+
+### 💿 Installation
+
+- Clone the repository:
+
+    ```bash
+    git clone https://github.com/chesteralejandro/ca-portfolio.git
+    ```
+
+- Navigate into the project directory:
+
+    ```bash
+    cd ca-portfolio
+    ```
+
+- Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+### 💻 Development
+
+- Start the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+- Open your browser and visit: [http://localhost:4321](http://localhost:4321)
+
+## ⚙️ Technologies Used
+
+- **Framework** — [Astro](https://astro.build)
 - **Styling** — Vanilla CSS with CSS custom properties
 - **Fonts** — Poppins (display), Nunito Sans (body) via Google Fonts
-- **Deployment** — Coming soon
+- **Deployment** — Github Pages
 
-## Project Structure
+## 📁 Folder Structure
 
 ```bash
 📁 ca-portfolio/
@@ -23,79 +68,19 @@ Built with Astro, styled with vanilla CSS using a custom design system.
 ├── README.md
 ├── tsconfig.json
 ├── 📁 .astro/
-│   ├── settings.json
-│   └── types.d.ts
 ├── 📁 .vscode/
-│   ├── extensions.json
-│   └── launch.json
 ├── 📁 public/
 │   ├── favicon.svg
 │   └── 📁 images/
-│       ├── chester.jpg
-│       ├── placeholder.webp
 │       └── 📁 icons/
-│           ├── envelope.svg
-│           ├── eye.svg
-│           ├── github.svg
-│           ├── paper-plane.svg
-│           └── play.svg
 └── 📁 src/
     ├── 📁 components/
-    │   ├── Contact.astro
-    │   ├── Footer.astro
-    │   ├── Hero.astro
-    │   ├── Nav.astro
-    │   └── Projects.astro
     ├── 📁 css/
-    │   └── index.css
     ├── 📁 layouts/
-    │   ├── Layout.astro
-    │   └── SectionLayout.astro
     └── 📁 pages/
-        └── index.astro
-
 ```
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm
-
-### Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/chesteralejandro/ca-portfolio.git
-
-    cd ca-portfolio
-    ```
-
-2. Install dependencies:
-
-    ```bash
-    npm install
-    ```
-
-3. Start the development server:
-
-    ```bash
-    npm run dev
-    ```
-
-4. Open your browser and visit `http://localhost:4321`
-
-## Available Scripts
-
-| Command           | Description                      |
-| ----------------- | -------------------------------- |
-| `npm run dev`     | Start development server         |
-| `npm run build`   | Build for production             |
-| `npm run preview` | Preview production build locally |
-
-## Design System
+## 🎨 Design System
 
 The portfolio uses a custom CSS design system with the following tokens:
 
@@ -104,7 +89,7 @@ The portfolio uses a custom CSS design system with the following tokens:
 - **Display font** — Poppins
 - **Body font** — Nunito Sans
 
-## Contact
+## 📬 Contacts
 
 - **LinkedIn** — [Chester Alejandro](https://www.linkedin.com/in/chester-alejandro-601403205/)
 - **GitHub** — [chesteralejandro](https://github.com/chesteralejandro)
